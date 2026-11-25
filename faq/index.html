@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>よくある質問 (FAQ) - IBM Bob</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <p class="site-header__label">IBM Bob</p>
+      <h1 class="site-header__title">よくある質問 (FAQ)</h1>
+      <p class="site-header__subtitle">IBM Bobに関するよくある質問をまとめました。</p>
+    </div>
+  </header>
+
+  <!-- 検索エリア -->
+  <div class="search-area" role="search">
+    <div class="search-area__inner">
+      <label class="search-label" for="search-input">キーワード検索</label>
+      <div class="search-input-wrap">
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder="キーワードで検索…"
+          autocomplete="off"
+          aria-label="FAQを検索"
+        >
+        <button class="search-clear" id="search-clear" aria-label="検索をクリア" title="クリア">×</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="main-content" id="main-content">
+
+    <!-- ゼロ件メッセージ -->
+    <div class="no-results" id="no-results" role="status" aria-live="polite">
+      該当するFAQが見つかりませんでした。
+    </div>
+
+    <!-- カテゴリ: 一般 -->
+    <section class="faq-section" data-category="general">
+      <div class="faq-section__header">
+        <h2 class="faq-section__title">一般</h2>
+        <span class="faq-section__count">5件</span>
+      </div>
+      <div class="accordion" role="list">
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-1">
+            <span>Bobとは何ですか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-1" aria-hidden="true">
+            <p>BobはAIを活用したコーディングアシスタントです。コードの作成、既存コードのリファクタリング、さまざまなタスクの実行を支援します。カスタムモードやカスタム指示を使って、Bobの機能を拡張することもできます。</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-2">
+            <span>Bobはどのように動作しますか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-2" aria-hidden="true">
+            <p>Bobは大規模言語モデル（LLM）を使用してリクエストを理解し、アクションに変換します。具体的には以下のことができます。</p>
+            <ul>
+              <li>プロジェクト内のファイルの読み書き</li>
+              <li>ターミナルでのコマンド実行</li>
+              <li>インターネットの閲覧（有効化されている場合）</li>
+              <li>Model Context Protocol（MCP）を介した外部ツールの利用</li>
+            </ul>
+            <p>チャットインターフェースを通じてBobに指示を出し、提案されたアクションを確認・承認しながら作業を進めます。</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-3">
+            <span>Bobは何ができますか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-3" aria-hidden="true">
+            <p>Bobはさまざまなコーディングタスクを支援します。</p>
+            <ul>
+              <li>自然言語の説明からコードを生成する</li>
+              <li>既存コードをリファクタリングする</li>
+              <li>バグを修正する</li>
+              <li>ドキュメントを作成する</li>
+              <li>コードを説明する</li>
+              <li>コードベースに関する質問に答える</li>
+              <li>繰り返し作業を自動化する</li>
+              <li>新しいファイルやプロジェクトを作成する</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-4">
+            <span>Bobで処理してはいけないデータはありますか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-4" aria-hidden="true">
+            <p>以下のデータはBobで処理しないでください。</p>
+            <ul>
+              <li>SPI（機密個人情報）</li>
+              <li>個人医療情報（PHI）</li>
+              <li>輸出規制対象データ（ITAR、APP など）</li>
+              <li>規制対象の金融データ（銀行口座番号、PAN、非公開の財務データ）</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-5">
+            <span>Bobを使用するリスクはありますか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-5" aria-hidden="true">
+            <p>Bobは強力なツールです。責任を持って使用することが重要です。以下の点に注意してください。</p>
+            <ul>
+              <li><strong>Bobは間違いを犯す可能性があります。</strong>承認する前に、Bobが提案した変更を必ず丁寧に確認してください。</li>
+              <li><strong>Bobはコマンドを実行できます。</strong>特に自動承認を有効にしている場合は、Bobにコマンドの実行を依頼する際に注意が必要です。</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- カテゴリ: 使い方 -->
+    <section class="faq-section" data-category="usage">
+      <div class="faq-section__header">
+        <h2 class="faq-section__title">使い方</h2>
+        <span class="faq-section__count">8件</span>
+      </div>
+      <div class="accordion" role="list">
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-6">
+            <span>新しいタスクを始めるにはどうすればよいですか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-6" aria-hidden="true">
+            <p>Bobパネルを開き、チャットボックスにタスクを入力してください。Bobに何をしてほしいかを、明確かつ具体的に記述することが重要です。</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-7">
+            <span>モードの切り替え方法を教えてください。</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-7" aria-hidden="true">
+            <p>チャット入力エリアのドロップダウンメニューから別のモードを選択するか、<code>/</code>コマンドを使って特定のモードに切り替えることができます。</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-8">
+            <span>ツールとは何ですか？どのように使いますか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-8" aria-hidden="true">
+            <p>ツールはBobがシステムと連携するための機能です。Bobはタスクを完了するために適切なツールを自動的に選択して使用します。ツールを直接呼び出す必要はありません。各ツールの使用時には、承認または拒否を求められます。</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-9">
+            <span>コンテキストメンションとは何ですか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-9" aria-hidden="true">
+            <p>コンテキストメンションは、ファイル、フォルダー、問題など、プロジェクトに関する具体的な情報をBobに伝える方法です。<code>@</code>記号に続けて対象のアイテムを指定します（例: <code>@/src/file.ts</code>、<code>@problems</code>）。</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-10">
+            <span>Bobはターミナルでコマンドを実行できますか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-10" aria-hidden="true">
+            <p>はい、Bobはコマンドを実行できます。コマンドの自動承認を有効にしていない限り、各コマンドの実行前に承認を求められます。コマンドの自動承認を有効にする際は、十分に注意してください。</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-11">
+            <span>Bobにフィードバックするにはどうすればよいですか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-11" aria-hidden="true">
+            <p>Bobが提案したアクションを承認または拒否することでフィードバックできます。フィードバックフィールドを使って、追加のコメントを入力することもできます。</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-12">
+            <span>Bobの動作をカスタマイズできますか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-12" aria-hidden="true">
+            <p>はい、以下の方法でBobをカスタマイズできます。</p>
+            <ul>
+              <li><strong>カスタム指示:</strong> すべてのモードに適用される全般的な指示や、モードごとの指示を設定できます。</li>
+              <li><strong>カスタムモード:</strong> 独自のプロンプトとツール権限を持つカスタムモードを作成できます。</li>
+              <li><strong>Bobルール:</strong> プロジェクトルートの<code>.bob/rules/</code>フォルダーにMarkdownルールファイルを作成して、追加のガイドラインを提供できます。</li>
+              <li><strong>設定:</strong> 自動承認、差分編集など、各種設定を調整できます。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-13">
+            <span>Bobには自動承認の設定がありますか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-13" aria-hidden="true">
+            <p>はい、有効にするとアクションを自動的に承認するいくつかの設定があります。</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- カテゴリ: 高度な機能 -->
+    <section class="faq-section" data-category="advanced">
+      <div class="faq-section__header">
+        <h2 class="faq-section__title">高度な機能</h2>
+        <span class="faq-section__count">2件</span>
+      </div>
+      <div class="accordion" role="list">
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-14">
+            <span>MCP（Model Context Protocol）とは何ですか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-14" aria-hidden="true">
+            <p>MCPはBobが外部サーバーと通信するためのプロトコルです。カスタムツールやリソースを追加することで、Bobの機能を拡張できます。</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-15">
+            <span>独自のMCPサーバーを作成できますか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-15" aria-hidden="true">
+            <p>はい、独自のMCPサーバーを作成してBobにカスタム機能を追加できます。</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- カテゴリ: トラブルシューティング -->
+    <section class="faq-section" data-category="troubleshooting">
+      <div class="faq-section__header">
+        <h2 class="faq-section__title">トラブルシューティング</h2>
+        <span class="faq-section__count">2件</span>
+      </div>
+      <div class="accordion" role="list">
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-16">
+            <span>Bobが応答しません。どうすればよいですか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-16" aria-hidden="true">
+            <ul>
+              <li>APIキーが正しく、期限切れでないことを確認してください。</li>
+              <li>インターネット接続を確認してください。</li>
+              <li>VS Codeを再起動してみてください。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item" role="listitem">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-17">
+            <span>意図しない変更がされました。元に戻すにはどうすればよいですか？</span>
+            <span class="accordion-icon" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-panel" id="panel-17" aria-hidden="true">
+            <p>BobはVS Codeのファイル編集機能を使用しています。標準の「元に戻す」コマンド（Ctrl/Cmd + Z）で変更を取り消すことができます。また、チェックポイント機能を使ってファイルへの変更を元の状態に戻すこともできます。</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>&copy; IBM Corporation. IBM Bobに関するよくある質問。</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
